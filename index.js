@@ -20,8 +20,8 @@ const ipfs = new IPFS({
   }
 });
 const web3 = new Web3();
-//const eventProvider = new Web3.providers.WebsocketProvider(`ws://${network}.infura.io/v3/${infura_key}`);
-const eventProvider = new Web3.providers.WebsocketProvider('ws://localhost:8545');
+const eventProvider = new Web3.providers.WebsocketProvider(`ws://${network}.infura.io/v3/${infura_key}`);
+//const eventProvider = new Web3.providers.WebsocketProvider('ws://localhost:8545');
 web3.setProvider(eventProvider)
 
 const Identity = require('./contracts/Identity');
