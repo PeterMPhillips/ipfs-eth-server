@@ -1,0 +1,24 @@
+{
+  "name": "ipfs-web3-server",
+  "version": "1.0.0",
+  "description": "Server that pins IPFS addresses from Ethereum events",
+  "main": "index.js",
+  "dependencies": {
+    "web3": "^1.0.0-beta.34",
+    "ipfs": "^0.34.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PeterMPhillips/ipfs-eth-server.git"
+  },
+  "author": "pmp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PeterMPhillips/ipfs-eth-server/issues"
+  },
+  "homepage": "https://github.com/PeterMPhillips/ipfs-eth-server#readme"
+}
