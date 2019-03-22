@@ -1,7 +1,7 @@
 const Web3 = require('web3');
 const IPFS = require('ipfs');
 const fs = require('fs');
-const network = 'mainnet';
+const network = 'rinkeby';
 
 
 if(fs.existsSync('keys.json')){
