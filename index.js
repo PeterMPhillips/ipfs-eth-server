@@ -10,13 +10,13 @@ if(fs.existsSync('keys.json')){
 }
 
 const ipfs = new IPFS({
-  repo: './ipfs',
-  init: false,
+  repo: '~/.ipfs',
+  init: false/*,
   config: {
     Addresses: {
       Gateway: '/ip4/0.0.0.0/tcp/8080'
     }
-  }
+  }*/
 });
 const web3 = new Web3(new Web3.providers.WebsocketProvider(`wss://${network}.infura.io/ws/v3/${infura_key}`));
 //const eventProvider = new Web3.providers.WebsocketProvider('ws://localhost:8545');
