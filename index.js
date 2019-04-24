@@ -29,6 +29,7 @@ ipfs.on('ready', () => {
   }, (error, events) => {
     events.forEach((event) => {
       let hash = event.returnValues.ipfs;
+      console.log(hash);
       ipfs.pin.ls(hash, (err, pinset) => {
         if(err) {
           console.log('Pinning hash...');
