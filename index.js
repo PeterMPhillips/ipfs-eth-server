@@ -1,7 +1,7 @@
 const Web3 = require('web3');
 const IPFS = require('ipfs');
 const fs = require('fs');
-const network = 'rinkeby';
+const network = 'mainnet';
 
 
 if(fs.existsSync('keys.json')){
@@ -9,9 +9,7 @@ if(fs.existsSync('keys.json')){
   infura_key = json.infura;
 }
 
-const ipfs = new IPFS({
-  repo: '~/.ipfs'
-});
+const ipfs = new IPFS({ host: 'localhost', port: 5001, protocol: 'http' });
 const web3 = new Web3(new Web3.providers.WebsocketProvider(`wss://${network}.infura.io/ws/v3/${infura_key}`));
 //const eventProvider = new Web3.providers.WebsocketProvider('ws://localhost:8545');
 
