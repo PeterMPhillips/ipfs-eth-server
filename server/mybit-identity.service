@@ -1,0 +1,11 @@
+[Unit]
+Description=mybit identity daemon
+
+[Service]
+ExecStart=/usr/local/bin/node /root/ipfs-eth-server/index.js
+Restart=always
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target

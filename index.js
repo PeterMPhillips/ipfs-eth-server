@@ -4,8 +4,8 @@ const fs = require('fs');
 const network = 'mainnet';
 
 
-if(fs.existsSync('/root/ipfs-eth-server/keys.json')){
-  var json = JSON.parse(fs.readFileSync('/root/ipfs-eth-server/keys.json', 'utf8'));
+if(fs.existsSync('keys.json')){
+  var json = JSON.parse(fs.readFileSync('./keys.json', 'utf8'));
   infura_key = json.infura;
 }
 
