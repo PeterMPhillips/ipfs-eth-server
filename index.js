@@ -1,16 +1,10 @@
+require('dotenv').config()
 const Web3 = require('web3');
 const IPFS = require('ipfs');
-const fs = require('fs');
 const network = 'mainnet';
 
-
-if(fs.existsSync('keys.json')){
-  var json = JSON.parse(fs.readFileSync('./keys.json', 'utf8'));
-  infura_key = json.infura;
-}
-
 const ipfs = new IPFS({ host: 'localhost', port: 5001, protocol: 'http' });
-const web3 = new Web3(new Web3.providers.WebsocketProvider(`wss://${network}.infura.io/ws/v3/${infura_key}`));
+const web3 = new Web3(new Web3.providers.WebsocketProvider(`wss://${network}.infura.io/ws/v3/${process.env.INFURA_KEY}`));
 //const eventProvider = new Web3.providers.WebsocketProvider('ws://localhost:8545');
 
 const Identity = require('./contracts/Identity');
